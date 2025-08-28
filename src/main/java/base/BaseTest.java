@@ -1,16 +1,12 @@
 package base;
 
 import Utilities.Utilities;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-
 import java.time.Duration;
-import java.util.Set;
+
 
 public class BaseTest extends Utilities {
     protected WebDriver driver;

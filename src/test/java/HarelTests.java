@@ -2,7 +2,7 @@ import Purchasing_Travel_Insurance.TravelInsurance;
 import base.BaseTest;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
+
 
 public class HarelTests extends BaseTest {
 
