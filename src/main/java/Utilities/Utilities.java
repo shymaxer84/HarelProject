@@ -4,8 +4,8 @@ package Utilities;
 import org.openqa.selenium.By;
 
 public class Utilities  {
-    public static final int  IMPLICIT_WAIT_TIME = 20;
-    public  static final int PAGE_WAIT_TIME = 5;
+    public static final int  IMPLICIT_WAIT_TIME = 10;
+    public  static final int PAGE_WAIT_TIME = 10;
 
     public By purchaseButton = By.xpath("//div[@class='jss11']/button[@class='MuiButtonBase-root MuiButton-root jss34 jss13 MuiButton-contained jss12 MuiButton-containedPrimary']");//enum ?
 
