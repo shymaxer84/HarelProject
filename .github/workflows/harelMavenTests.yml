@@ -44,4 +44,19 @@ jobs:
           name: testng-reports
           path: target/surefire-reports/
 
+      - name: Upload TestNG reports (Surefire)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: testng-surefire-reports
+          path: target/surefire-reports/
+
+      - name: Upload TestNG HTML reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: testng-html-report
+          path: target/test-output/
+
+
 
