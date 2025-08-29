@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad222c4b-a727-4cda-8f58-8563635248c1" name="Changes" comment="First">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="ad222c4b-a727-4cda-8f58-8563635248c1" name="Changes" comment="TestreNew">
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,12 +157,38 @@
       <option name="project" value="LOCAL" />
       <updated>1756467168639</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="First">
+      <option name="closed" value="true" />
+      <created>1756468585551</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756468585551</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Test">
+      <option name="closed" value="true" />
+      <created>1756469072215</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756469072215</updated>
+    </task>
+    <task id="LOCAL-00007" summary="TestreNew">
+      <option name="closed" value="true" />
+      <created>1756470779138</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1756470779138</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First" />
-    <option name="LAST_COMMIT_MESSAGE" value="First" />
+    <MESSAGE value="Test" />
+    <MESSAGE value="TestreNew" />
+    <option name="LAST_COMMIT_MESSAGE" value="TestreNew" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
