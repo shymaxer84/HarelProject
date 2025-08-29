@@ -28,7 +28,7 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           cache: 'maven'
-          # 👇 фикс если вдруг цепляется dependency snapshot
+
           disable-dependency-versions: true
 
       - name: Build with Maven
