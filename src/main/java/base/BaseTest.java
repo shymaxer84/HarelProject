@@ -14,10 +14,6 @@ public class BaseTest extends Utilities {
     @BeforeMethod
     public void setUP(){
 
-//        driver = new ChromeDriver();
-//        driver.manage().window().maximize();
-//        driver.get("https://digital.harel-group.co.il/travel-policy");
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Utilities.PAGE_WAIT_TIME));
 
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--remote-allow-origins=*");
