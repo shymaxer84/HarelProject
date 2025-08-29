@@ -6,63 +6,34 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven and Selenium
+name: Java CI with Maven
 
 on:
   push:
-    branches: [main]
+    branches: [ "main" ]
   pull_request:
-    branches: [main]
+    branches: [ "main" ]
 
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repository
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      # 2. Set up JDK 17
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
           distribution: 'temurin'
-          cache: maven
-
-      # 3. Install Chrome (для Selenium)
-      - name: Install Chrome
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y wget unzip
-          wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo apt install -y ./google-chrome-stable_current_amd64.deb
-
-      # 4. Install ChromeDriver
-      - name: Install ChromeDriver
-        run: |
-          CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
-          wget -q https://chromedriver.storage.googleapis.com/$CHROME_VERSION/chromedriver_linux64.zip
-          unzip chromedriver_linux64.zip
-          sudo mv chromedriver /usr/local/bin/
-          sudo chmod +x /usr/local/bin/chromedriver
-
-      # 5. Build and run Maven tests
-      - name: Build and run tests
-        run: mvn clean test -B -Dsurefire.printSummary=true -Dsurefire.useFile=false
-
-      #6.Disconnect dependency snapshot
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: 'npm'
-          check-latest: true
+          java-version: '17'
+          cache: 'maven'
+          # 👇 фикс если вдруг цепляется dependency snapshot
           disable-dependency-versions: true
 
-     #7.
-      - run: npm install --ignore-scripts
-      - run: npm ci --legacy-peer-deps
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
 
+      - name: Run tests
+        run: mvn test
 
