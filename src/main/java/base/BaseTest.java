@@ -14,7 +14,6 @@ public class BaseTest extends Utilities {
     @BeforeMethod
     public void setUP(){
 
-
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--remote-allow-origins=*");
 
