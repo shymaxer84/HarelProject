@@ -6,22 +6,24 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: Java CI with Maven and TestNG
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Забираем код
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # 2. Ставим JDK
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
@@ -29,29 +31,24 @@ jobs:
           java-version: '17'
           cache: 'maven'
 
-          disable-dependency-versions: true
-
+      # 3.
       - name: Build with Maven
-        run: mvn -B package --file pom.xml
+        run: mvn -B clean package -DskipTests
 
-      - name: Run tests
+      # 4.
+      - name: Run Tests
         run: mvn test
 
-      - name: Upload TestNG reports
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: testng-reports
-          path: target/surefire-reports/
-
-      - name: Upload TestNG reports (Surefire)
+      # 5.
+      - name: Upload Surefire reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: testng-surefire-reports
           path: target/surefire-reports/
 
-      - name: Upload TestNG HTML reports
+      # 6.
+      - name: Upload TestNG HTML report
         if: always()
         uses: actions/upload-artifact@v4
         with:
