@@ -31,8 +31,6 @@ public class BaseTest extends Utilities {
 
             driver = new ChromeDriver(options);
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-            // 👉 Здесь открывается сайт
             driver.get("https://digital.harel-group.co.il/travel-policy");
 
     }
