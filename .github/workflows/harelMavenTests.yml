@@ -61,3 +61,8 @@ jobs:
           check-latest: true
           disable-dependency-versions: true
 
+     #7.
+      - run: npm install --ignore-scripts
+      - run: npm ci --legacy-peer-deps
+
+
