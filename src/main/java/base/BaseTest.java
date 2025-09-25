@@ -1,6 +1,6 @@
 package base;
 
-import Utilities.Utilities;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import java.time.Duration;
 
 
-public class BaseTest extends Utilities {
+public class BaseTest  {
     protected WebDriver driver;
     @BeforeMethod
     public void setUP(){

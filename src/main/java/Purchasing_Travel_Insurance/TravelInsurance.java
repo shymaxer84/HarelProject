@@ -16,7 +16,7 @@ import java.time.temporal.ChronoUnit;
 
 public class TravelInsurance extends Utilities {
 
-    private WebDriver driver;
+    public WebDriver driver;
 
     LocalDate startDate = LocalDate.now().plusDays(7);
     LocalDate endDate = startDate.plusDays(30);

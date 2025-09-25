@@ -5,9 +5,9 @@ import org.openqa.selenium.By;
 
 public class Utilities  {
     public static final int  IMPLICIT_WAIT_TIME = 10;
-    public  static final int PAGE_WAIT_TIME = 10;
+//    public  static final int PAGE_WAIT_TIME = 10;
 
-    public By purchaseButton = By.xpath("//div[@class='jss11']/button[@class='MuiButtonBase-root MuiButton-root jss34 jss13 MuiButton-contained jss12 MuiButton-containedPrimary']");//enum ?
+    public By purchaseButton = By.xpath("//div[@class='jss11']/button[@class='MuiButtonBase-root MuiButton-root jss34 jss13 MuiButton-contained jss12 MuiButton-containedPrimary']");
 
     public By chooseContinent = By.xpath("//div[@id='destination-0']//*[name()='svg']");
 
